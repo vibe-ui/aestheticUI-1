@@ -1,0 +1,126 @@
+@import 'variables';
+@import 'config';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-stack;
+    height: 1000px;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.link-hover-effect::after {
+    content: "";
+    display: block;
+    width: 0;
+    border-bottom: 2px solid;
+    margin: 0 auto;
+    transition: all 0.3s linear;
+}
+
+.link-hover-effect:hover::after {
+    width: 100%;
+}
+
+section, footer {
+    padding: 70px 0;
+}
+
+nav {
+    transition: background-color 100ms ease-in;
+}
+
+.nav-scrolled {
+    // background-color: lighten($primary, 10%);  
+    background-color: $primary-light;  
+    box-shadow: 0 3px 20px rgba(black, 0.2);
+  }
+
+.highlights-icon {
+    width: 120px;
+    height: 120px;
+}
+
+ul {                                
+    li {
+        list-style: none;
+        position: relative;
+    }
+}
+
+ul.custom-bullet-disc {                              // For round red bullets
+    li::before{
+        content: "";
+			position: absolute;
+			left: -20px;
+			top: 12px;
+			width: 10px;
+			height: 10px;
+			background-color: $danger;
+			border-radius: 50%;
+    }
+}
+
+ul.custom-bullet-star {                             //  For * bullets                       
+    li::before{
+        content: "*";
+			position: absolute;
+			left: -20px;
+			top: -1px;
+			color: $danger;
+            font-size: 1.5em;
+            font-weight: bold;
+    }
+}
+
+.numbers-icon {
+    width: 80px;
+    height: 80px;
+}
+
+.client-img {
+    width: 50%;
+}
+
+.card-line-break {                  // For colour line in clients card
+    height: 3px;
+    width: 40%;
+}
+
+.border-rounded-top {                                       // For rounded border (top only) in clients card
+    border-top-left-radius: .5rem !important; 
+    border-top-right-radius: .5rem !important;
+}
+
+.section-break {                                       // For White space between sections
+    margin-bottom: 120px;
+}
+
+.border-rounded-5 {               // For plans card border radius
+    border-radius: 1.5rem;
+}
+
+.pricing-plan-card-body {
+    border: 1px solid;
+}
+
+.question-mark-icon {
+    width: 20%;
+}
+
+.footer-line-break {
+    height: 2px !important; 
+    background-color: white;
+}
+
+.social-media-icons {
+    width: 20%;
+}
